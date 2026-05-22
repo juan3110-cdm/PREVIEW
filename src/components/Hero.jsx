@@ -124,24 +124,9 @@ export default function Hero({ onJump }) {
         </div>
       </div>
 
-      {/* ── Bottom: trust row + scroll nudge ── */}
+      {/* ── Bottom: scroll nudge ── */}
       <div className="absolute inset-x-0 bottom-0 z-10 px-6 md:px-12 pb-8 text-paper/80">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div
-            role="list"
-            aria-label="Acreditaciones"
-            className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] tracking-wide"
-          >
-            {[
-              'Oncólogos Certificados SVO',
-              'Equipo Multidisciplinario',
-              'Planes de Tratamiento Personalizados',
-            ].map((badge) => (
-              <span key={badge} role="listitem" className="inline-flex items-center gap-2">
-                <Dot className="text-paper/70" /> {badge}
-              </span>
-            ))}
-          </div>
+        <div className="flex justify-end">
           <button
             onClick={() => onJump('about')}
             aria-label="Explorar la clínica"
